@@ -1,0 +1,19 @@
+div {
+
+  line-height: 33vh;
+  font-family: 'Work Sans', cursive;
+  text-decoration: none;
+  background-color: white;
+  color:black;
+}
+
+div.course {
+  pointer-events: auto;
+}
+
+div.child {
+    pointer-events: none;
+    background-color: inherit;
+    color: inherit;
+
+}
