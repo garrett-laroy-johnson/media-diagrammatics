@@ -1,7 +1,7 @@
 let font;
 let points;
 let bounds;
-let sz = 200;
+let sz = 300;
 var scl = 50; // number of vectors in row/column
 var xvec, yvec;
 var noiseInc = 0.001; // zoom/scale of noise. lower number more gradual, higher more erratic.

@@ -1,17 +1,12 @@
 let view = 0;
 
 function scrollToAnchor(aid) {
-  // console.log(aid);
-  // var target = $(aid).offset().top
-  // console.log(target);
-  // // The magic...smooth scrollin' goodness.
-  // $("html, body").animate({
-  //   scrollTop: target
-  // }, 500);
-  // //prevent the page from jumping down to our section.
   $('html, body').animate({
     scrollTop: $(`${aid}`).offset().top
   }, 5000);
+  if (aid == "#integration") {
+    loop();
+  }
 }
 
 function preload() {
@@ -28,10 +23,10 @@ function setup() {
     sampleFactor: 5,
     simplifyThreshold: 1,
   });
-  bounds = font.textBounds(" p5 ", 0, 0, sz);
+  bounds = font.textBounds("integration", 0, 0, sz);
   for (var i = 0; i < points.length; i++) {
     particles[i] = new Particle(
-      (points[i].x + bounds.w / 2),
+      (points[i].x + ((windowWidth - bounds.w) / 2)),
       (points[i].y) + (height / 2) + bounds.h / 2);
   }
 }
@@ -43,6 +38,11 @@ function keyPressed() {
     }
   } else if (keyCode == DOWN_ARROW) {
     view++;
+    if (view >= views.length) {
+      view = 0;
+    }
+  } else if (typeof view == "number") {
+    view = key;
   }
   scrollToAnchor(views[view]);
   document.getElementById("counter").innerHTML = view;
