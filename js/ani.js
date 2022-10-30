@@ -11,7 +11,7 @@ function scrollToAnchor(aid) {
   // //prevent the page from jumping down to our section.
   $('html, body').animate({
     scrollTop: $(`${aid}`).offset().top
-  }, 10000);
+  }, 5000);
 }
 
 function preload() {

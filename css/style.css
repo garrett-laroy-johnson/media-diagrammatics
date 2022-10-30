@@ -3,15 +3,16 @@
 
 div {
 
-  line-height: 33vh;
-  font-family: 'VT323-Regular';
+
+  font-family: 'Times New Roman';
   text-decoration: none;
   background-color: white;
   color:black;
 }
 
-div.course {
+div.banner {
   pointer-events: auto;
+    line-height: 33vh;
 }
 
 div.child {
