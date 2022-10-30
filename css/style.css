@@ -20,3 +20,9 @@ div.child {
     color: inherit;
 
 }
+
+#count {
+  position:fixed;
+  bottom:0;
+  left:0;
+}

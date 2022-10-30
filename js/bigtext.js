@@ -3,9 +3,9 @@
  * Copyright (c) 2017 Zach Leatherman (@zachleat)
  * MIT License */
 function bigTextLoad() {
-  $('#title').bigtext();
-  $('#another').bigtext();
-  $('#glj').bigtext();
+  for (let v of views) {
+    $(v).bigtext();
+  }
   //  let b = document.querySelectorAll("body");
   // let b = document.getElementsByClassName("course");
   // for (i=0;i<b.length;i++){

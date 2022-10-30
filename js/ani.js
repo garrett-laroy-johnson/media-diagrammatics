@@ -1,3 +1,5 @@
+let view = 0;
+
 function scrollToAnchor(aid) {
   // console.log(aid);
   // var target = $(aid).offset().top
@@ -35,13 +37,15 @@ function setup() {
 }
 
 function keyPressed() {
-  if (key == "1") {
-    scrollToAnchor('#title');
-  } else if (key == '2') {
-    scrollToAnchor('#another');
-  } else if (key == '3') {
-    scrollToAnchor('#integration');
+  if (keyCode == UP_ARROW) {
+    if (view > 0) {
+      view--;
+    }
+  } else if (keyCode == DOWN_ARROW) {
+    view++;
   }
+  scrollToAnchor(views[view]);
+  document.getElementById("counter").innerHTML = view;
 }
 
 function draw() {

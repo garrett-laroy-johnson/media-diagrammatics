@@ -1,0 +1,1 @@
+let views = ['#title', '#another', '#integration', '#schizo', '#mediagram']
